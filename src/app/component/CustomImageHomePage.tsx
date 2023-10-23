@@ -7,14 +7,9 @@ type Props = { src: StaticImageData };
 export default function CustomImageHomePage(props: Props) {
   const { src } = props;
   return (
-    <div className="relative ">
+    <div className="relative flex justify-center items-center">
       <div
-        style={{
-          left: "30%",
-          right: "30%",
-          top: "30%",
-        }}
-        className="absolute text-white text-center "
+        className="absolute text-white text-center w-5/12"
       >
         <h1 className="font-bold text-4xl mb-3">Expert Chefs</h1>
         <p>

@@ -1,10 +1,9 @@
-import Image from 'next/image'
-import SliderHomePage from './component/SliderHomePage'
+import Body from './component/Body'
 
 export default function Home() {
   return (
     <main>
-     <SliderHomePage/>
+   <Body/>
     </main>
   )
 }
