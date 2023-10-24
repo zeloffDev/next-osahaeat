@@ -1,69 +1,42 @@
 import React from "react";
+import RestauranSvg from "../svg/RestauranSvg";
+import StarSvg from "../svg/StarSvg";
+import AddresSvg from "../svg/AddresSvg";
 
 export default function CardFeatureRestaurant() {
   return (
-    <div className="grid rounded-lg shadow-lg border p-2 grid-cols-12 gap-4">
-      <div className="col-span-2 ">
-        <img
-          src="https://preview.cruip.com/podcast/images/podcast-04.jpg"
-          width={88}
-          height={88}
-          alt="Podcast 04"
-        />
-      </div>
-      <div className="col-span-10 ">
-        <p className="font-medium">Focusing on one </p>
-        <div className="flex items-center space-x-1">
-          <svg
-            className="w-4 h-4 text-yellow-300"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 22 20"
-          >
-            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-          </svg>
-          <svg
-            className="w-4 h-4 text-yellow-300"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 22 20"
-          >
-            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-          </svg>
-          <svg
-            className="w-4 h-4 text-yellow-300"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 22 20"
-          >
-            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-          </svg>
-          <svg
-            className="w-4 h-4 text-yellow-300"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 22 20"
-          >
-            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-          </svg>
-          <svg
-            className="w-4 h-4 text-gray-300 dark:text-gray-500"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 22 20"
-          >
-            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-          </svg>
-        </div>
-        <p className="font-light truncate text-xs">
-          In today's show, we're excited to have Mike chats with Indie Dev
-          Benedicte Ruiz about getting into public speaking. Mike was the
+    <div className="flex dark:bg-gray-800/20 dark:bg-opacity-50 rounded-lg shadow-lg hover:shadow-xl border dark:border-0 p-2 grid-cols-12 gap-4 transition duration-300 ease-in-out hover:scale-105">
+      <img
+        src="https://preview.cruip.com/podcast/images/podcast-04.jpg"
+        width={77}
+        height={77}
+        alt="Podcast 04"
+        className="rounded"
+      />
+      <div className="truncate flex flex-col justify-between w-full">
+        <p className="font-medium hover:text-sky-500 cursor-pointer">
+          Focusing on one{" "}
         </p>
+        <div className="flex items-center font-light truncate text-xs space-x-1">
+          <StarSvg />
+          <p className="pr-5">5.0 (35)</p>
+          <RestauranSvg />
+          <p>Hamberger</p>
+        </div>
+        <div className="flex items-center w-full justify-between space-x-1">
+          <div>
+            <span className="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
+              Red
+            </span>
+            <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+              Green
+            </span>
+          </div>
+          <div className="flex items-center pr-5 font-light truncate text-xs space-x-1">
+            <AddresSvg />
+            <p>4.5 Km</p>
+          </div>
+        </div>
       </div>
     </div>
   );

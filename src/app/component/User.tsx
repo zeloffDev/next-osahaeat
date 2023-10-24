@@ -2,7 +2,7 @@ import React from "react";
 
 export default function User() {
   return (
-    <div className="group inline-block relative">
+    <div className="group inline-block  duration-300 relative">
       <div className="flex items-center h-full">
         <button
           id="dropdownDividerButton"
