@@ -9,12 +9,12 @@ export default function FeatureRestaurant() {
         <p className="font-light text-sm">See All</p>
       </div>
       <div className="grid grid-rows-4 grid-cols-1 lg:grid-cols-2 gap-8">
-       <CardFeatureRestaurant/>
-       <CardFeatureRestaurant/>
-       <CardFeatureRestaurant/>
-       <CardFeatureRestaurant/>
-       <CardFeatureRestaurant/>
-       <CardFeatureRestaurant/>
+        <CardFeatureRestaurant />
+        <CardFeatureRestaurant />
+        <CardFeatureRestaurant />
+        <CardFeatureRestaurant />
+        <CardFeatureRestaurant />
+        <CardFeatureRestaurant />
       </div>
     </div>
   );

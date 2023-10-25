@@ -1,5 +1,5 @@
 "use client";
-import React, { ButtonHTMLAttributes }  from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import Slider from "react-slick";
 import img from "public/img/pexels-photo-1346132.jpeg";
 import img2 from "public/img/platter-2009590_1280.jpg";

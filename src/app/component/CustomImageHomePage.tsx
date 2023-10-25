@@ -8,9 +8,7 @@ export default function CustomImageHomePage(props: Props) {
   const { src } = props;
   return (
     <div className="relative flex justify-center items-center">
-      <div
-        className="absolute text-white text-center w-5/12"
-      >
+      <div className="absolute text-white text-center w-5/12">
         <h1 className="font-bold text-4xl mb-3">Expert Chefs</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde
@@ -29,7 +27,7 @@ export default function CustomImageHomePage(props: Props) {
           width: "100%",
           height: "100vh",
           objectFit: "cover",
-          imageRendering: "pixelated",
+          // imageRendering: "pixelated",
         }}
       />
     </div>
