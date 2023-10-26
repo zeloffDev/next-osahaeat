@@ -3,6 +3,7 @@ import FeatureRestaurant from "./FeatureRestaurant";
 import SliderHomePage from "./SliderHomePage";
 import ExploreCategory from "./ExploreCategory";
 import SliderSpecialDises from "./SliderSpecialDises";
+import Menu from "./Menu";
 
 export default function Body() {
   return (
@@ -11,6 +12,7 @@ export default function Body() {
       <ExploreCategory />
       <FeatureRestaurant />
       <SliderSpecialDises/>
+      <Menu/>
     </>
   );
 }

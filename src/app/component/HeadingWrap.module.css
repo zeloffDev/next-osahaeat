@@ -1,0 +1,12 @@
+.headingWrap::before {
+  width: 80px;
+  height: 2px;
+  background: #cf1d16;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import RestauranSvg from "../svg/RestauranSvg";
 import StarSvg from "../svg/StarSvg";
 import AddresSvg from "../svg/AddresSvg";
@@ -6,7 +7,7 @@ import AddresSvg from "../svg/AddresSvg";
 export default function CardFeatureRestaurant() {
   return (
     <div className="flex dark:bg-gray-800/20 dark:bg-opacity-50 rounded-lg shadow-lg hover:shadow-xl border dark:border-0 p-2 grid-cols-12 gap-4 transition duration-300 ease-in-out hover:scale-105">
-      <img
+      <Image
         src="https://preview.cruip.com/podcast/images/podcast-04.jpg"
         width={77}
         height={77}

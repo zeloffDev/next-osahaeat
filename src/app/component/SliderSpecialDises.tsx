@@ -5,6 +5,7 @@ import img2 from "public/img/dishes_2.jpg.webp";
 import img3 from "public/img/dishes_3.jpg.webp";
 import Slider from "react-slick";
 import CardSpecialDises from "./CardSpecialDises";
+import style from "./HeadingWrap.module.css";
 
 const arr = [
   { src: img, title: 1 },
@@ -25,34 +26,43 @@ export default function SliderSpecialDises() {
     speed: 1000,
     autoplaySpeed: 4000,
     cssEase: "linear",
+    nextArrow: <></>,
+    prevArrow: <></>,
     responsive: [
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2
-          }
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
         },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <Slider {...settings}>
-      {arr.map((item, index) => {
-        return (
-          <div key={index}>
-            <CardSpecialDises src={item.src} />
-          </div>
-        );
-      })}
-    </Slider>
+    <div>
+      <div className="relative p-10">
+        <p className={`font-bold text-3xl text-center  ${style.headingWrap}`}>
+          SPECIAL DISHES
+        </p>
+      </div>
+      <Slider {...settings}>
+        {arr.map((item, index) => {
+          return (
+            <div key={index}>
+              <CardSpecialDises src={item.src} />
+            </div>
+          );
+        })}
+      </Slider>
+    </div>
   );
 }

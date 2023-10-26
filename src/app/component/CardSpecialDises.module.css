@@ -2,6 +2,8 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
+  width: 31vw;
+  height: 31vw;
 }
 
 .imageContainer::before {
@@ -22,4 +24,18 @@
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .imageContainer {
+    width: 45vw;
+    height: 45vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .imageContainer {
+    width: 90vw;
+    height: 90vw;
+  }
 }

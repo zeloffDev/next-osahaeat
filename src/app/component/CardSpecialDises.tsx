@@ -17,10 +17,6 @@ export default function CardSpecialDises(props: Props) {
         </p>
       </div>
       <div
-        style={{
-          width: "31vw",
-          height: "31vw",
-        }}
         className={style.imageContainer}
       >
         <Image
