@@ -1,8 +1,12 @@
 import React from "react";
+import { logoutActionServer } from "../action/loginAction";
 
 export default function User() {
+  const handleClickLogout = async () => {
+    await logoutActionServer();
+  };
   return (
-    <div className="group inline-block  duration-300 relative">
+    <div className="group inline-block text-left duration-300 relative">
       <div className="flex items-center h-full">
         <button
           id="dropdownDividerButton"
@@ -27,20 +31,17 @@ export default function User() {
       </div>
       <ul className="absolute rounded w-44 hidden  group-hover:block  bg-white  dark:bg-gray-700">
         <li>
-          <a
-            className="rounded  bg-white  dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-400 py-2 px-4 block"
-            href="#"
+          <button
+            onClick={handleClickLogout}
+            className="rounded text-left w-full bg-white  dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-400 py-2 px-4 block"
           >
             Đăng xuất
-          </a>
+          </button>
         </li>
         <li>
-          <a
-            className="rounded  bg-white  dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-400 py-2 px-4 block"
-            href="#"
-          >
+          <button className="rounded text-left w-full bg-white  dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-400 py-2 px-4 block">
             Đăng kí
-          </a>
+          </button>
         </li>
       </ul>
     </div>

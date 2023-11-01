@@ -4,7 +4,7 @@ const nextConfig = {
     serverActions: true,
   },
   images: {
-    domains: ["s3.amazonaws.com","preview.cruip.com"],
+    domains: ["s3.amazonaws.com", "preview.cruip.com", "localhost"],
   },
 };
 

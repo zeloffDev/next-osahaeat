@@ -6,13 +6,13 @@ import { toast } from "react-toastify";
 
 export default function Page() {
   const router = useRouter();
- 
+
   const handleSubmit = async (formData: FormData) => {
     try {
       const res = await actionServer(formData);
       if (res.success) {
         toast.success("Đăng nhập thành công");
-        localStorage.setItem("token",res.data);
+        localStorage.setItem("token", res.data);
         router.push("/");
       } else {
         toast.error("Sai tên đăng nhập hoặc mật khẩu");

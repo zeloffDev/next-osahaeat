@@ -1,5 +1,7 @@
 "use server";
-// import { cookies } from "next/headers";
+import { cookies } from "next/headers";
+import fetchWithAuth from "../httpClient";
+import { redirect } from "next/navigation";
 
 export const actionServer = async (formData: FormData) => {
   const params = new URLSearchParams();
@@ -8,16 +10,20 @@ export const actionServer = async (formData: FormData) => {
   params.append("userName", email as string);
   params.append("password", password as string);
 
-  const response = await fetch(`http://localhost:8080/login/signin`, {
+  const response = await fetchWithAuth(`/login/signin`, {
     method: "POST",
     body: params,
+    cache: "force-cache",
   });
 
-  const res = await response.json();
+  if (response.success) {
+    cookies().set("token", response.data);
+  }
 
-  // if (res.success) {
-  //   cookies().set("authorization", res.data);
-  // }
+  return response;
+};
 
-  return res;
+export const logoutActionServer = async () => {
+  cookies().delete("token");
+  redirect("/login");
 };
